@@ -1,7 +1,7 @@
 import './index.css'
 
 const TabItem = props => {
-  const {tabDetails, clickTab} = props
+  const {tabDetails, clickTab, activeTabId} = props
   const {tabId, displayText} = tabDetails
 
   const onClickTab = () => {
@@ -10,7 +10,13 @@ const TabItem = props => {
 
   return (
     <li className="tabItem-container">
-      <button type="button" className="tabItem-button" onClick={onClickTab}>
+      <button
+        type="button"
+        className={
+          tabId === activeTabId ? 'tabItem-button activeTab' : 'tabItem-button'
+        }
+        onClick={onClickTab}
+      >
         {displayText}
       </button>
     </li>

@@ -127,6 +127,7 @@ class MatchGame extends Component {
                     clickTab={this.clickTab}
                     key={eachTab.tabId}
                     tabDetails={eachTab}
+                    activeTabId={activeTabId}
                   />
                 ))}
               </ul>

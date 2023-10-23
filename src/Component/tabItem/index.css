@@ -8,4 +8,8 @@
   background-color: transparent;
   color: #ffffff;
   border: none;
+  cursor: pointer;
+}
+.activeTab {
+  color: red;
 }
